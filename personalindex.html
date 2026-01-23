@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MD. Tanjirul Islam Emon</title>
+
+  <style>
+    :root{
+      --bg-light:#f4f6f8;
+      --text-light:#0f172a;
+      --bg-dark:#020617;
+      --text-dark:#e5e7eb;
+      --card-light:#ffffff;
+      --card-dark:#020617;
+      --accent:#38bdf8;
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      transition:background .4s,color .4s;
+    }
+
+    body.light{background:var(--bg-light);color:var(--text-light)}
+    body.dark{background:var(--bg-dark);color:var(--text-dark)}
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:18px 40px;
+      position:sticky;
+      top:0;
+      backdrop-filter:blur(10px);
+      z-index:10;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      font-size:20px;
+      color:var(--accent);
+    }
+
+    nav a{
+      margin-left:22px;
+      text-decoration:none;
+      color:inherit;
+      font-weight:500;
+      position:relative;
+    }
+
+    nav a::after{
+      content:"";
+      position:absolute;
+      left:0;bottom:-4px;
+      width:0;height:2px;
+      background:var(--accent);
+      transition:.3s;
+    }
+    nav a:hover::after{width:100%}
+
+    .toggle{
+      margin-left:20px;
+      cursor:pointer;
+      padding:6px 14px;
+      border:1px solid var(--accent);
+      border-radius:30px;
+      font-size:14px;
+    }
+
+    .hero{
+      padding:90px 40px 70px;
+      text-align:center;
+      animation:fadeUp 1s ease;
+    }
+
+    .hero h1{font-size:42px;margin-bottom:10px}
+    .hero span{color:var(--accent)}
+    .hero p{font-size:18px;opacity:.9}
+
+    section{
+      padding:70px 40px;
+      max-width:1100px;
+      margin:auto;
+    }
+
+    h2{
+      text-align:center;
+      margin-bottom:40px;
+      font-size:30px;
+    }
+
+    /* cards */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
+    }
+
+    .card{
+      background:var(--card-light);
+      padding:26px;
+      border-radius:var(--radius);
+      box-shadow:0 20px 40px rgba(0,0,0,.08);
+      transition:.4s;
+    }
+
+    body.dark .card{background:var(--card-dark)}
+
+    .card:hover{
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 30px 60px rgba(0,0,0,.15);
+    }
+
+    /* portfolio */
+    .project{
+      border-left:4px solid var(--accent);
+    }
+
+    /* contact */
+    form{
+      max-width:500px;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    input,textarea{
+      padding:14px;
+      border-radius:12px;
+      border:1px solid #94a3b8;
+      font-size:15px;
+    }
+
+    button{
+      padding:14px;
+      border:none;
+      border-radius:14px;
+      background:var(--accent);
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+    }
+
+    footer{
+      text-align:center;
+      padding:24px;
+      opacity:.7;
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(40px)}
+      to{opacity:1;transform:none}
+    }
+
+  </style>
+</head>
+
+<body class="light">
+
+<header>
+  <div class="logo">
+    <svg width="34" height="34" viewBox="0 0 100 100" fill="none">
+      <circle cx="50" cy="50" r="45" stroke="#38bdf8" stroke-width="8"/>
+      <path d="M40 25 L60 50 L45 50 L60 75" stroke="#38bdf8" stroke-width="8" fill="none"/>
+    </svg>
+    EMON
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <span class="toggle" onclick="toggleMode()">🌙 / ☀️</span>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Hi, I'm <span>MD. Tanjirul Islam Emon</span></h1>
+  <p>Student • Developer • Freelancer<br/>I build modern, clean and user‑friendly websites.</p>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p style="text-align:center;max-width:700px;margin:auto">
+    I'm a passionate student, web developer and freelancer focused on building
+    responsive and professional websites while continuously learning modern web technologies.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card">HTML, CSS, JavaScript</div>
+    <div class="card">Responsive Web Design</div>
+    <div class="card">Personal & Business Websites</div>
+    <div class="card">Basic Git & GitHub</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Portfolio Projects</h2>
+  <div class="grid">
+    <div class="card project">
+      <h3>Personal Website</h3>
+      <p>Modern responsive personal portfolio with dark & light mode.</p>
+    </div>
+    <div class="card project">
+      <h3>Business Landing Page</h3>
+      <p>Clean landing page for small businesses and startups.</p>
+    </div>
+    <div class="card project">
+      <h3>Coming Soon</h3>
+      <p>More real client projects will be added here.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form action="mailto:emon07032005@gmail.com" method="post" enctype="text/plain">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2026 MD. Tanjirul Islam Emon — All rights reserved
+</footer>
+
+<script>
+  function toggleMode(){
+    document.body.classList.toggle('dark');
+    document.body.classList.toggle('light');
+  }
+</script>
+
+</body>
+</html>
