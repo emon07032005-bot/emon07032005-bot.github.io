@@ -4,7 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>MD. Tanjirul Islam Emon | Web Developer & Photography Enthusiast</title>
+  <title>MD. Tanjirul Islam Emon | Web Developer & Freelancer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="MD. Tanjirul Islam Emon – Web Developer & Freelancer. I build modern, clean and user-friendly websites.">
+  <meta name="keywords" content="Web Developer, Freelancer, HTML CSS JavaScript, Portfolio, Bangladesh">
+  <meta name="author" content="MD. Tanjirul Islam Emon">
+
+  <!-- OpenGraph / Social Preview -->
+  <meta property="og:title" content="MD. Tanjirul Islam Emon | Web Developer">
+  <meta property="og:description" content="Modern, clean and responsive websites built with HTML, CSS and JavaScript.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://emon07032005-bot.github.io">
+  <!-- NOTE: preview.png না থাকলে future এ add করতে পারো -->
+  <meta property="og:image" content="https://emon07032005-bot.github.io/preview.png">
+
+  <!-- Speed polish -->
+  <meta name="theme-color" content="#38bdf8">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
     :root{
@@ -23,7 +40,7 @@
     body{
       margin:0;
       font-family:'Segoe UI',system-ui,sans-serif;
-      transition:.4s;
+      transition:background .3s,color .3s;
     }
 
     body.light{background:var(--bg-light);color:var(--text-light)}
@@ -37,18 +54,10 @@
       position:sticky;
       top:0;
       backdrop-filter:blur(10px);
-      background:rgba(255,255,255,.7);
       z-index:10;
     }
 
-    body.dark header{
-      background:rgba(2,6,23,.7);
-    }
-
     .logo{
-      display:flex;
-      align-items:center;
-      gap:10px;
       font-weight:700;
       font-size:20px;
       color:var(--accent);
@@ -70,7 +79,7 @@
       width:0;
       height:2px;
       background:var(--accent);
-      transition:.3s;
+      transition:.25s;
     }
     nav a:hover::after{width:100%}
 
@@ -86,7 +95,7 @@
     .hero{
       padding:90px 40px 70px;
       text-align:center;
-      animation:fadeUp 1s ease;
+      animation:fadeUp .8s ease;
     }
 
     .hero h1{font-size:42px;margin-bottom:10px}
@@ -115,26 +124,22 @@
       background:var(--card-light);
       padding:26px;
       border-radius:var(--radius);
-      box-shadow:0 20px 40px rgba(0,0,0,.08);
-      transition:.4s;
+      box-shadow:0 16px 36px rgba(0,0,0,.08);
+      transition:transform .25s, box-shadow .25s;
     }
 
     body.dark .card{background:var(--card-dark)}
 
     .card:hover{
-      transform:translateY(-10px);
-      box-shadow:
-        0 0 0 1px var(--accent),
-        0 30px 60px rgba(0,0,0,.15);
+      transform:translateY(-6px);
+      box-shadow:0 24px 48px rgba(0,0,0,.14);
     }
 
-    .project{
-      border-left:4px solid var(--accent);
-    }
+    .project{border-left:4px solid var(--accent)}
 
     form{
       max-width:500px;
-      margin:auto;
+      margin:0 auto;
       display:flex;
       flex-direction:column;
       gap:16px;
@@ -164,8 +169,27 @@
     }
 
     @keyframes fadeUp{
-      from{opacity:0;transform:translateY(40px)}
+      from{opacity:0;transform:translateY(24px)}
       to{opacity:1;transform:none}
+    }
+
+    /* Reduce motion for performance/accessibility */
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none!important;transition:none!important}
+    }
+
+    /* 📱 Mobile Optimization */
+    @media (max-width:768px){
+      header{padding:14px 20px;flex-wrap:wrap}
+      nav{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap}
+      nav a{margin:8px 0;font-size:15px}
+      .hero{padding:70px 20px 50px}
+      .hero h1{font-size:32px}
+      .hero p{font-size:16px;line-height:1.6}
+      section{padding:60px 20px}
+      h2{font-size:26px}
+      .card{padding:22px}
+      input,textarea{font-size:16px}
     }
   </style>
 </head>
@@ -173,14 +197,7 @@
 <body class="light">
 
 <header>
-  <div class="logo">
-    <svg width="34" height="34" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="45" stroke="#38bdf8" stroke-width="8" fill="none"/>
-      <path d="M40 25 L60 50 L45 50 L60 75" stroke="#38bdf8" stroke-width="8" fill="none"/>
-    </svg>
-    EMON
-  </div>
-
+  <div class="logo">EMON</div>
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -193,15 +210,15 @@
 <section class="hero">
   <h1>Hi, I'm <span>MD. Tanjirul Islam Emon</span></h1>
   <p>
-    Student • Developer • Freelancer • Photography Enthusiast<br>
-    I design and build modern, clean and user-friendly websites.
+    Student • Web Developer • Freelancer • Photography Enthusiast<br>
+    I build modern, clean and user-friendly websites.
   </p>
 </section>
 
 <section id="about">
   <h2>About Me</h2>
   <p style="text-align:center;max-width:700px;margin:auto">
-    I'm a student, web developer, freelancer, and photography enthusiast—capturing emotions through light.
+    I'm a student, web developer, freelancer, and photography enthusiast—exploring emotions through light.
     Alongside photography, I build responsive and professional websites while learning modern web technologies.
   </p>
 </section>
@@ -212,7 +229,7 @@
     <div class="card">HTML, CSS, JavaScript</div>
     <div class="card">Responsive Web Design</div>
     <div class="card">Personal & Business Websites</div>
-    <div class="card">Basic Git & GitHub</div>
+    <div class="card">Git & GitHub</div>
   </div>
 </section>
 
@@ -220,22 +237,18 @@
   <h2>Portfolio Projects</h2>
   <div class="grid">
     <div class="card project">
-      <h3>Personal Website</h3>
-      <p>Modern personal portfolio with dark & light mode.</p>
+      <h3>Personal Portfolio</h3>
+      <p>Modern portfolio website with light & dark mode.</p>
     </div>
     <div class="card project">
       <h3>Business Landing Page</h3>
-      <p>Clean landing page for small businesses.</p>
+      <p>Clean landing page for startups and small businesses.</p>
     </div>
     <div class="card project">
-      <h3>Coming Soon</h3>
-      <p>More real client projects will be added here.</p>
+      <h3>More Coming Soon</h3>
+      <p>New projects will be added as I grow.</p>
     </div>
   </div>
-
-  <p style="text-align:center;opacity:.7;margin-top:20px">
-    Real projects are added as I continue working with clients.
-  </p>
 </section>
 
 <section id="contact">
@@ -254,8 +267,8 @@
 
 <script>
   function toggleMode(){
-    document.body.classList.toggle('dark');
-    document.body.classList.toggle('light');
+    document.body.classList.toggle("dark");
+    document.body.classList.toggle("light");
   }
 </script>
 
