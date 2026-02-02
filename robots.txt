@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emon07032005-bot.github.io/sitemap.xml
