@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MD. Tanjirul Islam Emon</title>
+
+  <title>MD. Tanjirul Islam Emon | Web Developer & Photography Enthusiast</title>
 
   <style>
     :root{
@@ -21,8 +22,8 @@
 
     body{
       margin:0;
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      transition:background .4s,color .4s;
+      font-family:'Segoe UI',system-ui,sans-serif;
+      transition:.4s;
     }
 
     body.light{background:var(--bg-light);color:var(--text-light)}
@@ -36,7 +37,12 @@
       position:sticky;
       top:0;
       backdrop-filter:blur(10px);
+      background:rgba(255,255,255,.7);
       z-index:10;
+    }
+
+    body.dark header{
+      background:rgba(2,6,23,.7);
     }
 
     .logo{
@@ -59,8 +65,10 @@
     nav a::after{
       content:"";
       position:absolute;
-      left:0;bottom:-4px;
-      width:0;height:2px;
+      left:0;
+      bottom:-4px;
+      width:0;
+      height:2px;
       background:var(--accent);
       transition:.3s;
     }
@@ -97,7 +105,6 @@
       font-size:30px;
     }
 
-    /* cards */
     .grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -115,19 +122,19 @@
     body.dark .card{background:var(--card-dark)}
 
     .card:hover{
-      transform:translateY(-10px) scale(1.02);
-      box-shadow:0 30px 60px rgba(0,0,0,.15);
+      transform:translateY(-10px);
+      box-shadow:
+        0 0 0 1px var(--accent),
+        0 30px 60px rgba(0,0,0,.15);
     }
 
-    /* portfolio */
     .project{
       border-left:4px solid var(--accent);
     }
 
-    /* contact */
     form{
       max-width:500px;
-      margin:0 auto;
+      margin:auto;
       display:flex;
       flex-direction:column;
       gap:16px;
@@ -160,7 +167,6 @@
       from{opacity:0;transform:translateY(40px)}
       to{opacity:1;transform:none}
     }
-
   </style>
 </head>
 
@@ -168,12 +174,13 @@
 
 <header>
   <div class="logo">
-    <svg width="34" height="34" viewBox="0 0 100 100" fill="none">
-      <circle cx="50" cy="50" r="45" stroke="#38bdf8" stroke-width="8"/>
+    <svg width="34" height="34" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45" stroke="#38bdf8" stroke-width="8" fill="none"/>
       <path d="M40 25 L60 50 L45 50 L60 75" stroke="#38bdf8" stroke-width="8" fill="none"/>
     </svg>
     EMON
   </div>
+
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
@@ -187,16 +194,15 @@
   <h1>Hi, I'm <span>MD. Tanjirul Islam Emon</span></h1>
   <p>
     Student • Developer • Freelancer • Photography Enthusiast<br>
-    I build modern, clean and user-friendly websites.
+    I design and build modern, clean and user-friendly websites.
   </p>
-</section>   
+</section>
 
-  
- <section id="about">
+<section id="about">
   <h2>About Me</h2>
   <p style="text-align:center;max-width:700px;margin:auto">
-   I'm a student, web developer, freelancer, and photography enthusiast—exploring emotions through light.
-  Alongside photography, I build responsive and professional websites while learning modern web technologies.
+    I'm a student, web developer, freelancer, and photography enthusiast—capturing emotions through light.
+    Alongside photography, I build responsive and professional websites while learning modern web technologies.
   </p>
 </section>
 
@@ -215,24 +221,28 @@
   <div class="grid">
     <div class="card project">
       <h3>Personal Website</h3>
-      <p>Modern responsive personal portfolio with dark & light mode.</p>
+      <p>Modern personal portfolio with dark & light mode.</p>
     </div>
     <div class="card project">
       <h3>Business Landing Page</h3>
-      <p>Clean landing page for small businesses and startups.</p>
+      <p>Clean landing page for small businesses.</p>
     </div>
     <div class="card project">
       <h3>Coming Soon</h3>
       <p>More real client projects will be added here.</p>
     </div>
   </div>
+
+  <p style="text-align:center;opacity:.7;margin-top:20px">
+    Real projects are added as I continue working with clients.
+  </p>
 </section>
 
 <section id="contact">
   <h2>Contact Me</h2>
   <form action="mailto:emon07032005@gmail.com" method="post" enctype="text/plain">
-    <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
     <textarea rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
@@ -251,6 +261,3 @@
 
 </body>
 </html>
-
-
-
