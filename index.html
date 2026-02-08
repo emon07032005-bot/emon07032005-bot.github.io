@@ -3,274 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>MD. Tanjirul Islam Emon | Web Developer & Freelancer</title>
-
-  <!-- SEO -->
-  <meta name="description" content="MD. Tanjirul Islam Emon – Web Developer & Freelancer. I build modern, clean and user-friendly websites.">
-  <meta name="keywords" content="Web Developer, Freelancer, HTML CSS JavaScript, Portfolio, Bangladesh">
-  <meta name="author" content="MD. Tanjirul Islam Emon">
-
-  <!-- OpenGraph / Social Preview -->
-  <meta property="og:title" content="MD. Tanjirul Islam Emon | Web Developer">
-  <meta property="og:description" content="Modern, clean and responsive websites built with HTML, CSS and JavaScript.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://emon07032005-bot.github.io">
-  <!-- NOTE: preview.png না থাকলে future এ add করতে পারো -->
-  <meta property="og:image" content="https://emon07032005-bot.github.io/preview.png">
-
-  <!-- Speed polish -->
-  <meta name="theme-color" content="#38bdf8">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <style>
-    :root{
-      --bg-light:#f4f6f8;
-      --text-light:#0f172a;
-      --bg-dark:#020617;
-      --text-dark:#e5e7eb;
-      --card-light:#ffffff;
-      --card-dark:#020617;
-      --accent:#38bdf8;
-      --radius:18px;
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family:'Segoe UI',system-ui,sans-serif;
-      transition:background .3s,color .3s;
-    }
-
-    body.light{background:var(--bg-light);color:var(--text-light)}
-    body.dark{background:var(--bg-dark);color:var(--text-dark)}
-
-    header{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:18px 40px;
-      position:sticky;
-      top:0;
-      backdrop-filter:blur(10px);
-      z-index:10;
-    }
-
-    .logo{
-      font-weight:700;
-      font-size:20px;
-      color:var(--accent);
-    }
-
-    nav a{
-      margin-left:22px;
-      text-decoration:none;
-      color:inherit;
-      font-weight:500;
-      position:relative;
-    }
-
-    nav a::after{
-      content:"";
-      position:absolute;
-      left:0;
-      bottom:-4px;
-      width:0;
-      height:2px;
-      background:var(--accent);
-      transition:.25s;
-    }
-    nav a:hover::after{width:100%}
-
-    .toggle{
-      margin-left:20px;
-      cursor:pointer;
-      padding:6px 14px;
-      border:1px solid var(--accent);
-      border-radius:30px;
-      font-size:14px;
-    }
-
-    .hero{
-      padding:90px 40px 70px;
-      text-align:center;
-      animation:fadeUp .8s ease;
-    }
-
-    .hero h1{font-size:42px;margin-bottom:10px}
-    .hero span{color:var(--accent)}
-    .hero p{font-size:18px;opacity:.9}
-
-    section{
-      padding:70px 40px;
-      max-width:1100px;
-      margin:auto;
-    }
-
-    h2{
-      text-align:center;
-      margin-bottom:40px;
-      font-size:30px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:24px;
-    }
-
-    .card{
-      background:var(--card-light);
-      padding:26px;
-      border-radius:var(--radius);
-      box-shadow:0 16px 36px rgba(0,0,0,.08);
-      transition:transform .25s, box-shadow .25s;
-    }
-
-    body.dark .card{background:var(--card-dark)}
-
-    .card:hover{
-      transform:translateY(-6px);
-      box-shadow:0 24px 48px rgba(0,0,0,.14);
-    }
-
-    .project{border-left:4px solid var(--accent)}
-
-    form{
-      max-width:500px;
-      margin:0 auto;
-      display:flex;
-      flex-direction:column;
-      gap:16px;
-    }
-
-    input,textarea{
-      padding:14px;
-      border-radius:12px;
-      border:1px solid #94a3b8;
-      font-size:15px;
-    }
-
-    button{
-      padding:14px;
-      border:none;
-      border-radius:14px;
-      background:var(--accent);
-      font-size:16px;
-      font-weight:600;
-      cursor:pointer;
-    }
-
-    footer{
-      text-align:center;
-      padding:24px;
-      opacity:.7;
-    }
-
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(24px)}
-      to{opacity:1;transform:none}
-    }
-
-    /* Reduce motion for performance/accessibility */
-    @media (prefers-reduced-motion: reduce){
-      *{animation:none!important;transition:none!important}
-    }
-
-    /* 📱 Mobile Optimization */
-    @media (max-width:768px){
-      header{padding:14px 20px;flex-wrap:wrap}
-      nav{width:100%;display:flex;justify-content:space-between;flex-wrap:wrap}
-      nav a{margin:8px 0;font-size:15px}
-      .hero{padding:70px 20px 50px}
-      .hero h1{font-size:32px}
-      .hero p{font-size:16px;line-height:1.6}
-      section{padding:60px 20px}
-      h2{font-size:26px}
-      .card{padding:22px}
-      input,textarea{font-size:16px}
-    }
-  </style>
+  <title>Bubble Shooter Genies</title>
+  <meta name="description" content="Bubble Shooter Genies - a mystical bubble shooter adventure with level progression and star ratings." />
+  <meta name="theme-color" content="#020617" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
+  <div class="background-layer" aria-hidden="true"></div>
+  <div class="magic-overlay" aria-hidden="true"></div>
 
-<body class="light">
+  <main class="app" id="app">
+    <section class="screen screen--active" id="home-screen" aria-labelledby="home-title">
+      <div class="screen-content">
+        <div class="logo-badge">Genie's Realm</div>
+        <h1 class="title" id="home-title">Bubble Shooter</h1>
+        <h2 class="subtitle">Genies</h2>
+        <p class="tagline">
+          Match enchanted bubbles, unlock ancient levels, and earn stars under a starry Arabian night.
+        </p>
+        <button class="btn btn-primary" data-testid="play-button" id="play-button">
+          <span class="btn-icon">▶</span>
+          Play Now
+        </button>
+        <div class="home-hints">
+          <div>
+            <span class="hint-label">Touch & Drag</span>
+            <span class="hint-text">Aim your shot with your finger.</span>
+          </div>
+          <div>
+            <span class="hint-label">Match 3+</span>
+            <span class="hint-text">Pop bubbles for points and stars.</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<header>
-  <div class="logo">EMON</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <span class="toggle" onclick="toggleMode()">🌙 / ☀️</span>
-  </nav>
-</header>
+    <section class="screen" id="level-screen" aria-labelledby="level-title">
+      <header class="top-bar">
+        <button class="icon-button" data-testid="levels-back" id="levels-back" aria-label="Back to home">
+          ←
+        </button>
+        <div>
+          <h2 class="section-title" id="level-title">Select Level</h2>
+          <p class="section-subtitle">Unlock levels by earning stars.</p>
+        </div>
+        <div class="top-bar-spacer"></div>
+      </header>
+      <div class="levels-grid" id="levels-grid"></div>
+    </section>
 
-<section class="hero">
-  <h1>Hi, I'm <span>MD. Tanjirul Islam Emon</span></h1>
-  <p>
-    Student • Web Developer • Freelancer • Photography Enthusiast<br>
-    I build modern, clean and user-friendly websites.
-  </p>
-</section>
+    <section class="screen" id="game-screen" aria-labelledby="game-title">
+      <header class="top-bar">
+        <button class="icon-button" data-testid="game-back" id="game-back" aria-label="Back to levels">
+          ←
+        </button>
+        <div class="scoreboard">
+          <div>
+            <p class="score-label">Level</p>
+            <h3 class="score-value" id="level-name">Desert Dawn</h3>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <p class="score-label">Score</p>
+            <h3 class="score-value score-value--accent" id="score-display">0</h3>
+          </div>
+          <div class="divider"></div>
+          <div>
+            <p class="score-label">Stars</p>
+            <div class="stars" id="star-display"></div>
+          </div>
+        </div>
+        <button class="icon-button" data-testid="sound-toggle" id="sound-toggle" aria-label="Toggle sound">
+          🔊
+        </button>
+      </header>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p style="text-align:center;max-width:700px;margin:auto">
-    I'm a student, web developer, freelancer, and photography enthusiast—exploring emotions through light.
-    Alongside photography, I build responsive and professional websites while learning modern web technologies.
-  </p>
-</section>
+      <div class="game-area">
+        <div class="game-card">
+          <canvas id="game-canvas" data-testid="game-canvas"></canvas>
+          <div class="next-bubble-card">
+            <p>Next</p>
+            <div class="next-bubble" id="next-bubble"></div>
+          </div>
+        </div>
+        <div class="controls-hint">
+          Drag to aim • Release to shoot
+        </div>
+      </div>
+    </section>
+  </main>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card">HTML, CSS, JavaScript</div>
-    <div class="card">Responsive Web Design</div>
-    <div class="card">Personal & Business Websites</div>
-    <div class="card">Git & GitHub</div>
+  <div class="modal" id="level-complete-modal" aria-hidden="true">
+    <div class="modal-card">
+      <h2 class="modal-title">Victory!</h2>
+      <p class="modal-subtitle" id="complete-subtitle">Level complete</p>
+      <div class="modal-stars" id="complete-stars"></div>
+      <div class="modal-score">
+        <span>Final Score</span>
+        <strong id="complete-score">0</strong>
+      </div>
+      <div class="modal-actions">
+        <button class="btn btn-primary" data-testid="next-level" id="next-level">Next Level</button>
+        <div class="modal-actions-row">
+          <button class="btn btn-secondary" data-testid="retry-level" id="retry-level">Retry</button>
+          <button class="btn btn-secondary" data-testid="levels-button" id="levels-button">Levels</button>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
 
-<section id="projects">
-  <h2>Portfolio Projects</h2>
-  <div class="grid">
-    <div class="card project">
-      <h3>Personal Portfolio</h3>
-      <p>Modern portfolio website with light & dark mode.</p>
-    </div>
-    <div class="card project">
-      <h3>Business Landing Page</h3>
-      <p>Clean landing page for startups and small businesses.</p>
-    </div>
-    <div class="card project">
-      <h3>More Coming Soon</h3>
-      <p>New projects will be added as I grow.</p>
+  <div class="modal" id="game-over-modal" aria-hidden="true">
+    <div class="modal-card modal-card--danger">
+      <h2 class="modal-title">Game Over</h2>
+      <p class="modal-subtitle">The bubble wall reached the bottom.</p>
+      <div class="modal-score">
+        <span>Your Score</span>
+        <strong id="gameover-score">0</strong>
+      </div>
+      <div class="modal-actions-row">
+        <button class="btn btn-primary" data-testid="gameover-retry" id="gameover-retry">Try Again</button>
+        <button class="btn btn-secondary" data-testid="gameover-levels" id="gameover-levels">Levels</button>
+      </div>
     </div>
   </div>
-</section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <form action="mailto:emon07032005@gmail.com" method="post" enctype="text/plain">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
-
-<footer>
-  © 2026 MD. Tanjirul Islam Emon — All rights reserved
-</footer>
-
-<script>
-  function toggleMode(){
-    document.body.classList.toggle("dark");
-    document.body.classList.toggle("light");
-  }
-</script>
-
+  <script src="game.js"></script>
 </body>
 </html>
